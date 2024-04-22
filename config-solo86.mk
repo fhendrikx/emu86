@@ -3,6 +3,6 @@
 
 TARGET=solo86
 HOST=native
-CONSOLE=none
+CONSOLE=pty
 SERIAL=none
 STYLE=intel
