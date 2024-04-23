@@ -20,11 +20,11 @@ int io_read_byte (word_t p, byte_t * b)
 	{
 	switch (p)
 		{
-		case 0x16:
-			char_recv(b);
-			break;
-		case 0x18:
+		case 0x20:
 			*b = char_poll();
+			break;
+		case 0x22:
+			char_recv(b);
 			break;
 		default:
 			*b = 0xFF;
@@ -39,7 +39,7 @@ int io_write_byte (word_t p, byte_t b)
 	{
 	switch (p)
 		{
-		case 0x16:
+		case 0x22:
 			char_send(b);
 			break;
 		}
