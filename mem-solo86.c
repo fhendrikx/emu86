@@ -22,6 +22,11 @@ word_t mem_read_word (addr_t a)
 
 void mem_write_byte (addr_t a, byte_t b, byte_t init)
 	{
+	// allow writes to ROM
+	if (a >= ROM_BASE)
+		{
+		init = 1;
+		}
 	// No memory mapped device
 	mem_write_byte_0 (a, b, init);
 	}
