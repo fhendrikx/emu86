@@ -25,6 +25,8 @@ int io_read_byte (word_t p, byte_t * b)
 			break;
 		case 0x22:
 			char_recv(b);
+			// convert 0x0D to 0x0A
+			if (*b == 13) *b = 10;
 			break;
 		default:
 			*b = 0xFF;
