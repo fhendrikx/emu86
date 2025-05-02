@@ -125,6 +125,13 @@ ifeq ($(TARGET), or566)
 	EMU86_OBJS += rom-or566.o
 endif
 
+ifeq ($(TARGET), solo86)
+	CPU = 808x
+	PLATFORM = solo86
+	BOARD = solo86
+	EMU86_OBJS += rom-solo86.o
+endif
+
 EMU86_OBJS += \
 	mem-$(BOARD).o \
 	io-$(BOARD).o \
