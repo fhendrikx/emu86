@@ -5,11 +5,13 @@
 # elks:    minimal PC to run ELKS
 # advtech: Advantech SNMP-1000 SBC
 # or556:   Orkitt 556
+# solo86:  Solo86 PC
 
-TARGET=pcxtat
+#TARGET=pcxtat
 #TARGET=elks
 #TARGET=advtech
 #TARGET=or556
+TARGET=solo86
 
 # Host selection
 # native:     run on native host
@@ -46,5 +48,5 @@ SERIAL=none
 # att:   AT&T syntax (GNU default)
 # intel: Intel syntax
 
-#STYLE=att
-STYLE=intel
+STYLE=att
+#STYLE=intel
